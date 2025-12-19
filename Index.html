@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Meu Site</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      text-align: center;
+      color: white;
+      min-height: 100vh;
+      padding: 30px;
+
+      background-image: url("fundo.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    button {
+      padding: 15px 20px;
+      border: none;
+      background: #b20c4a;
+      color: white;
+      font-size: 16px;
+      border-radius: 16px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    img {
+      margin-top: 20px;
+      width: 220px;
+      border-radius: 15px;
+    }
+
+    a {
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>𝔽𝕖𝕚𝕥𝕠 𝕡𝕒𝕣𝕒 𝕧𝕠𝕔𝕖❤️</h1>
+  <p>Clique no botão</p>
+
+  <!-- Botão frase + imagem -->
+  <button onclick="fraseAleatoria()">𝕴 •°♡𝕷𝕺𝖁𝕰 𝖄𝕺𝖀♡</button>
+
+  <p id="texto"></p>
+  <img id="imagem">
+
+  <!-- Botão para segunda página -->
+  <br>
+  <a href="pagina2.html">
+    <button>Ir para outra página</button>
+  </a>
+
+  <script>
+    function fraseAleatoria() {
+      const frases = [
+        "V᥆ᥴᥱ ᥱ ιᥒᥴrι᥎ᥱᥣ 💖",
+        "Sᥱᥙ ᥴᥲbᥱᥣ᥆ ᥱᥒr᥆ᥣᥲd᥆ ꧑ᥱ ᥴᥲtι᥎ᥲ ✨",
+        "Sᥱᥙ᥉ ᥆ᥣh᥆᥉ ᥉ᥲ᥆ ᥣιᥒd᥆᥉ ᥴ᥆꧑᥆ ᥙ꧑ᥲ gᥲᥣᥲ᥊ιᥲ cheia de estrelas 🌸",
+        "V᥆ᥴᥱ ᥱ ᥙ꧑ᥲ ρᥱ᥉᥉᥆ᥲ ꧑ᥙιt᥆ gᥱᥒtιᥣ ᥱ ᥲd꧑ιrᥲ᥎ᥱᥣ 💫",
+        "Sᥙᥲ ρᥱr᥉᥆ᥒᥲᥣιdᥲdᥱ ᥱ ᥲd꧑ιrᥲ᥎ᥱᥣ 💕"
+      ];
+
+      const imagens = [
+        "fig1.png",
+        "fig2.png",
+        "fig3.png",
+        "fig4.png",
+        "fig5.png"
+      ];
+
+      const numero = Math.floor(Math.random() * frases.length);
+
+      document.getElementById("texto").innerText = frases[numero];
+      document.getElementById("imagem").src = imagens[numero];
+    }
+  </script>
+
+</body>
+</html>
